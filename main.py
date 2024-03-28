@@ -1,8 +1,13 @@
 import string
 import random
 
-length = int(input("How long do you want your password to be - "))
-
+while True:
+    try:
+        length = int(input("How long do you want your password to be - "))
+        break  
+    except ValueError:
+        print("Please enter a valid number.")
+        
 CharsList = string.ascii_letters
 NumsList = string.digits
 
